@@ -57,6 +57,7 @@ public abstract class Underlay {
    * @param port the port that the underlay should be bound to.
    * @return true iff the initialization was successful.
    */
+  // TODO: should throw a checked exception.
   protected abstract boolean initUnderlay(int port);
 
   /**

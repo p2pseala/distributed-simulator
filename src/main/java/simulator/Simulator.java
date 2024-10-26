@@ -346,6 +346,11 @@ public class Simulator implements Orchestrator {
         // creat the new node in a new thread
         // Once the node call `ready` method, the node's onStart method will be called
         network.Network network = this.getMiddleLayer(id);
+        try {
+          network.initUnderLay();
+        } catch (Exception e) {
+          log.fatal("could not initialize underlay for node " + id, e);
+        }
         network.initUnderLay();
         network.create(this.allId);
 

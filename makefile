@@ -13,3 +13,5 @@ generate:
 	@mvn compile
 docker-stop-opera:
 	docker container stop $$(docker ps -aq --filter name="opera" --format="{{.ID}}") || true
+opera-hello-world:
+	@mvn exec:java -Dexec.mainClass="examples.helloservers.Main"

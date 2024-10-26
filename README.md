@@ -1,21 +1,28 @@
-# Overview
-
-The Distributed Systems simulator is an offline simulator for distributed systems.
-The simulator provides an integratable and easy-to-use interface for running, and testing
-your distributed system on various underlays, as well as extracting grafana metrics.
-
-## Content:
-
 - [Architecture overview](#overview)
-- [Install](#install)
+- [QuickStart](#quickstart)
 - [Usage](#basic-usage)
 - [Examples](#examples)
 - [Documentation](#doc)
 
-## Architecture Overview <a name="overview"></a>
+# Overview
+Opera is a local system simulator that allows you to simulate an entire distributed system on your local machine.
+You define the behavior of a "node" in the system, and the simulator will take care of the rest, including instantiating
+the nodes, their communication, and their termination and clean up.
+More importantly, the simulator provides a way to monitor the system's performance by registering Prometheus metrics and
+visualizing them using Grafana. <br>
 
-The simulator provides a channel for every node for receiving, and sending messages to the other nodes in the clsuter.
-These messages are of type events, and they are used to invoke certain actions in the destination node.
+## QuickStart
+
+Prerequisites:
+1. [Java 11 or higher](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) [![Java](https://img.shields.io/badge/Java-11-blue)](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+2. [Maven](https://maven.apache.org/download.cgi) [![Maven](https://img.shields.io/badge/Maven-3.8.3-blue)](https://maven.apache.org/download.cgi)
+3. [Docker](https://docs.docker.com/get-docker/) [![Docker](https://img.shields.io/badge/Docker-20.10.8-blue)](https://docs.docker.com/get-docker/)
+
+Clone the repository and checkout the master branch. <br>
+```bash
+git clone github.com/yhassanzadeh13/opera-java.git
+git checkout master
+```
 
 ## Install <a name="install"></a>
 

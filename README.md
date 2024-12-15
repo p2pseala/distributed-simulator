@@ -7,9 +7,13 @@
 # Overview
 Opera is a local system simulator that allows you to simulate an entire distributed system on your local machine.
 You define the behavior of a "node" in the system, and the simulator will take care of the rest, including instantiating
-the nodes, their communication, and their termination and clean up.
+a "specified number" of those nodes, their communication, and their termination and clean up.
 More importantly, the simulator provides a way to monitor the system's performance by registering Prometheus metrics and
 visualizing them using Grafana. <br>
+
+What Opera abstracts away from you, so you don't have to worry about:
+(1) Identifying a node; each instance of node receives an random unique `Identifier` from the simulator. This is the only
+thing you need to worry about.
 
 ## QuickStart
 
